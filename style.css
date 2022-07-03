@@ -1,0 +1,299 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "League Spartan", sans-serif;
+}
+
+.main-area {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #3b4664;
+}
+.main-area .main {
+  width: min(28em, 96%);
+  height: min(36em, 100%);
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3%;
+}
+.main-area .main__header {
+  width: 90%;
+  height: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.main-area .main__header h2 {
+  font-size: 3em;
+  color: hsl(0deg, 0%, 100%);
+}
+.main-area .main__header .themes {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main-area .main__header .themes p {
+  text-transform: uppercase;
+  color: white;
+  font-size: 1em;
+  height: 1.4em;
+  line-height: 1.4em;
+  padding-top: 0.15em;
+  margin-right: 1em;
+  letter-spacing: 0.1em;
+}
+.main-area .main__header .themes div {
+  width: 4em;
+  height: 1.4em;
+  background-color: #252d44;
+  border-radius: 1em;
+  position: relative;
+}
+.main-area .main__header .themes div .modes {
+  font-weight: 500;
+  display: flex;
+  position: absolute;
+  background-color: transparent;
+  color: hsl(0deg, 0%, 100%);
+  align-items: center;
+  justify-content: center;
+  width: 4em;
+  height: 3em;
+  border-radius: 0%;
+  top: calc(0% - 2.2em);
+  left: calc(0% + 0.4em);
+}
+.main-area .main__header .themes div .modes p {
+  font-size: 0.8em;
+}
+.main-area .main__header .themes div button {
+  position: absolute;
+  bottom: 0;
+  width: 1.2em;
+  height: 1.2em;
+  border-radius: 50%;
+  border: none;
+  margin: 0.2em;
+  cursor: pointer;
+}
+.main-area .main__header .themes div button:hover {
+  opacity: 1;
+}
+.main-area .main__header .themes div .red {
+  opacity: 0;
+  background-color: hsl(6deg, 63%, 50%);
+  left: calc(0% + 0.1em);
+}
+.main-area .main__header .themes div .orange {
+  opacity: 0;
+  background-color: #ff8b38;
+  left: calc(0% + 1.7em);
+}
+.main-area .main__header .themes div .blue {
+  opacity: 0;
+  background-color: #94fff9;
+  left: calc(0% + 3.2em);
+}
+.main-area .main__header .themes div .active {
+  opacity: 1;
+}
+.main-area .main__screen {
+  width: 90%;
+  height: 20%;
+  background-color: hsl(224deg, 36%, 15%);
+  border-radius: 0.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main-area .main__screen p {
+  width: 96%;
+  overflow: hidden;
+  font-size: 3em;
+  color: hsl(0deg, 0%, 100%);
+  font-weight: 700;
+  text-align: right;
+}
+.main-area .main__numpad {
+  width: 90%;
+  height: 60%;
+  background-color: #252d44;
+  border-radius: 0.5em;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  grid-template-areas: "a b c d" "e f g h" "i j k l" "m n o p" "q q r r";
+  justify-items: center;
+  align-items: center;
+}
+.main-area .main__numpad .keypads {
+  font-size: 1.5em;
+  font-weight: 700;
+  height: 2em;
+  width: 3.4em;
+  color: hsl(221deg, 14%, 31%);
+  border-radius: 0.3em;
+  border: none;
+  background-color: hsl(30deg, 25%, 89%);
+  box-shadow: 0px 3px 0px 0px hsl(28deg, 16%, 65%);
+}
+.main-area .main__numpad .keypads:hover {
+  cursor: pointer;
+}
+.main-area .main__numpad .keypads:nth-child(4),
+.main-area .main__numpad .keypads:nth-child(17) {
+  background-color: hsl(225deg, 21%, 49%);
+  box-shadow: 0px 3px 0px 0px hsl(224deg, 28%, 35%);
+  color: white;
+  text-transform: uppercase;
+}
+.main-area .main__numpad .keypads:nth-child(4):hover,
+.main-area .main__numpad .keypads:nth-child(17):hover {
+  cursor: pointer;
+}
+.main-area .main__numpad .keypads:nth-child(17),
+.main-area .main__numpad .keypads:nth-child(18) {
+  width: 7.7em;
+}
+.main-area .main__numpad .keypads:nth-child(18) {
+  background-color: hsl(6deg, 63%, 50%);
+  box-shadow: 0px 3px 0px 0px hsl(6deg, 70%, 34%);
+  color: white;
+}
+.main-area .main__numpad .keypads:nth-child(18):hover {
+  cursor: pointer;
+}
+
+.red_theme .main-area {
+  background-color: #3b4664;
+}
+.red_theme .main-area .main__screen {
+  background-color: hsl(224deg, 36%, 15%);
+}
+.red_theme .main-area .main__numpad {
+  background-color: #252d44;
+}
+.red_theme .main-area .main__numpad .keypads {
+  color: hsl(221deg, 14%, 31%);
+  background-color: hsl(30deg, 25%, 89%);
+  box-shadow: 0px 3px 0px 0px hsl(28deg, 16%, 65%);
+}
+.red_theme .main-area .main__numpad .keypads:hover {
+  background-color: rgba(234, 227, 220, 0.5);
+}
+.red_theme .main-area .main__numpad .keypads:nth-child(4),
+.red_theme .main-area .main__numpad .keypads:nth-child(17) {
+  background-color: hsl(225deg, 21%, 49%);
+  color: hsl(0deg, 0%, 100%);
+  box-shadow: 0px 3px 0px 0px hsl(224deg, 28%, 35%);
+}
+.red_theme .main-area .main__numpad .keypads:nth-child(4):hover,
+.red_theme .main-area .main__numpad .keypads:nth-child(17):hover {
+  background-color: rgba(99, 112, 151, 0.5);
+}
+.red_theme .main-area .main__numpad .keypads:nth-child(18) {
+  background-color: hsl(6deg, 63%, 50%);
+  color: hsl(0deg, 0%, 100%);
+  box-shadow: 0px 3px 0px 0px hsl(6deg, 70%, 34%);
+}
+.red_theme .main-area .main__numpad .keypads:nth-child(18):hover {
+  background-color: rgba(208, 63, 47, 0.5);
+}
+.red_theme .main-area .main .title,
+.red_theme .main-area .main .theme-text,
+.red_theme .main-area .main .modes-text,
+.red_theme .main-area .main .digit {
+  color: hsl(0deg, 0%, 100%);
+}
+
+.orange_theme .main-area {
+  background-color: #e6e6e6;
+}
+.orange_theme .main-area .main__screen {
+  background-color: #eeeeee;
+}
+.orange_theme .main-area .main__numpad {
+  background-color: #d3cdcd;
+}
+.orange_theme .main-area .main__numpad .keypads {
+  color: #38382e;
+  background-color: hsl(30deg, 25%, 89%);
+  box-shadow: 0px 3px 0px 0px hsl(28deg, 16%, 65%);
+}
+.orange_theme .main-area .main__numpad .keypads:hover {
+  background-color: rgba(234, 227, 220, 0.5);
+}
+.orange_theme .main-area .main__numpad .keypads:nth-child(4),
+.orange_theme .main-area .main__numpad .keypads:nth-child(17) {
+  background-color: #62b5bd;
+  color: hsl(0deg, 0%, 100%);
+  box-shadow: 0px 3px 0px 0px #1e6169;
+}
+.orange_theme .main-area .main__numpad .keypads:nth-child(4):hover,
+.orange_theme .main-area .main__numpad .keypads:nth-child(17):hover {
+  background-color: rgba(98, 181, 189, 0.5);
+}
+.orange_theme .main-area .main__numpad .keypads:nth-child(18) {
+  background-color: #ff8b38;
+  color: hsl(0deg, 0%, 100%);
+  box-shadow: 0px 3px 0px 0px #843800;
+}
+.orange_theme .main-area .main__numpad .keypads:nth-child(18):hover {
+  background-color: rgba(255, 139, 56, 0.5);
+}
+.orange_theme .main-area .main .title,
+.orange_theme .main-area .main .theme-text,
+.orange_theme .main-area .main .modes-text,
+.orange_theme .main-area .main .digit {
+  color: #38382e;
+}
+
+.blue_theme .main-area {
+  background-color: #17062a;
+}
+.blue_theme .main-area .main__screen {
+  background-color: #1e0836;
+}
+.blue_theme .main-area .main__numpad {
+  background-color: #1e0836;
+}
+.blue_theme .main-area .main__numpad .keypads {
+  color: #ffe53d;
+  background-color: #331b4d;
+  box-shadow: 0px 3px 0px 0px #861d9d;
+}
+.blue_theme .main-area .main__numpad .keypads:hover {
+  background-color: rgba(51, 27, 77, 0.5);
+}
+.blue_theme .main-area .main__numpad .keypads:nth-child(4),
+.blue_theme .main-area .main__numpad .keypads:nth-child(17) {
+  background-color: #56077c;
+  color: hsl(0deg, 0%, 100%);
+  box-shadow: 0px 3px 0px 0px #bf16f5;
+}
+.blue_theme .main-area .main__numpad .keypads:nth-child(4):hover,
+.blue_theme .main-area .main__numpad .keypads:nth-child(17):hover {
+  background-color: rgba(86, 7, 124, 0.5);
+}
+.blue_theme .main-area .main__numpad .keypads:nth-child(18) {
+  background-color: #00decf;
+  color: hsl(0deg, 0%, 100%);
+  box-shadow: 0px 3px 0px 0px #6ef7ef;
+}
+.blue_theme .main-area .main__numpad .keypads:nth-child(18):hover {
+  background-color: rgba(0, 222, 207, 0.5);
+}
+.blue_theme .main-area .main .title,
+.blue_theme .main-area .main .theme-text,
+.blue_theme .main-area .main .modes-text,
+.blue_theme .main-area .main .digit {
+  color: #ffe53d;
+}/*# sourceMappingURL=style.css.map */

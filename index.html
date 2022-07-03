@@ -1,26 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Calculator app</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <title>Frontend Mentor | Calculator app</title>
 
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
 
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+    <!-- css links -->
+    <link rel="stylesheet" href="style.css" />
+    <script src="./script.js" defer></script>
+  </head>
+  <body class="red_theme">
+    <main class="main-area">
+      <div class="main">
+        <div class="main__header">
+          <h2 class="title">calc</h2>
+          <div class="themes">
+            <p class="theme-text">theme</p>
+            <div class="slider-btn">
+              <div class="modes">
+                <p class="modes-text">1</p>
+                <p class="modes-text">2</p>
+                <p class="modes-text">3</p>
+              </div>
+              <div class="buttons">
+                <button class="red active"></button
+                ><button class="orange"></button><button class="blue"></button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="main__screen">
+          <p class="digit"></p>
+        </div>
+        <div class="main__numpad">
+          <button class="keypads">7</button><button class="keypads">8</button
+          ><button class="keypads">9</button><button class="keypads">del</button
+          ><button class="keypads">4</button><button class="keypads">5</button
+          ><button class="keypads">6</button><button class="keypads">+</button
+          ><button class="keypads">1</button><button class="keypads">2</button
+          ><button class="keypads">3</button><button class="keypads">-</button
+          ><button class="keypads">.</button><button class="keypads">0</button>
+          <button class="keypads">/</button><button class="keypads">×</button
+          ><button class="keypads">reset</button
+          ><button class="keypads">=</button>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Tanvir Anzum</a>.
+      </div>
+    </footer>
+  </body>
 </html>
