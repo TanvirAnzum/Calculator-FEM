@@ -91,7 +91,7 @@ $white: hsl(0, 0, 100%);
   background-color: $main-bg;
 
   .main {
-    width: min(28em, 96%);
+    width: min(28em, 100%);
     height: min(36em, 100%);
     background-color: transparent;
     display: flex;
@@ -252,7 +252,7 @@ $white: hsl(0, 0, 100%);
 
       .keypads:nth-child(17),
       .keypads:nth-child(18) {
-        width: 7.7em;
+        width: 7.7em; //7.7
       }
 
       .keypads:nth-child(18) {
@@ -319,28 +319,15 @@ $white: hsl(0, 0, 100%);
   );
 }
 
-// @include update(
-//   $main-bg,
-//   $screen-bg,
-//   $keypad-bg,
-//   $blue-text,
-//   $orange,
-//   $orange-shadow,
-//   $key-bg,
-//   $key-shadow,
-//   $red,
-//   $dark-red
-// );
+/// responsiveness :3
 
-// @include update(
-//   #e6e6e6,
-//   #eeeeee,
-//   #d3cdcd,
-//   #38382e,
-//   $orange,
-//   $orange-shadow,
-//   #62b5bd,
-//   #1e6169,
-//   #ff8b38,
-//   #843800
-// );
+@media all and (max-width: 500px) {
+  .keypads {
+    width: 2.8em !important;
+  }
+
+  .keypads:nth-child(17),
+  .keypads:nth-child(18) {
+    width: 85% !important;
+  }
+}

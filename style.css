@@ -15,7 +15,7 @@
   background-color: #3b4664;
 }
 .main-area .main {
-  width: min(28em, 96%);
+  width: min(28em, 100%);
   height: min(36em, 100%);
   background-color: transparent;
   display: flex;
@@ -296,4 +296,15 @@
 .blue_theme .main-area .main .modes-text,
 .blue_theme .main-area .main .digit {
   color: #ffe53d;
+}
+
+@media all and (max-width: 500px) {
+  .keypads {
+    width: 2.8em !important;
+  }
+
+  .keypads:nth-child(17),
+.keypads:nth-child(18) {
+    width: 85% !important;
+  }
 }/*# sourceMappingURL=style.css.map */
